@@ -14,6 +14,9 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  
+  e,f,g = [a,b,c].sort
+  raise TriangleError if e <=0 or e + f <= g
   if a == b && b == c && a == c
     return :equilateral
   elsif a == b || b == c || a == c
